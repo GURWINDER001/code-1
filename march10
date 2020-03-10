@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+
+namespace QandStack
+{
+    class Program
+    {
+        int factorial = 1;
+        static void Main(string[] args)
+        {
+
+            Program p1 = new Program();
+           int k =  p1.Factorial(4);
+            Console.WriteLine("answer is {0}", k);
+        }
+
+
+        public int Factorial(int Input)
+        {
+            factorial *= Input--;
+            if (Input < 1) { return factorial; }
+           
+
+            return Factorial(Input);
+        }
+
+    }
+}
